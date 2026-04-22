@@ -76,7 +76,7 @@ def analyze(name: str):
     if sim_match and sim_match["similarity"] > 30:
         context += f"構造が{sim_match['name']}に{sim_match['similarity']:.1f}%類似しており、{sim_match['target']}への結合が推論されます。"
 
-    model = genai.GenerativeModel('gemini-2.5-flash')
+    model = genai.GenerativeModel('gemini-2.5-pro')
     prompt = f"""
         あなたはプロの計算生物学者および生化学者です。
         以下の成分名とコンテキストデータに基づき、詳細な解析結果を**必ず以下のJSONフォーマットで**出力してください。
